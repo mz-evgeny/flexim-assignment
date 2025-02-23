@@ -1,0 +1,10 @@
+{
+  "name": "flexim-assignment",
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "typescript": "^5.7.3"
+  },
+  "workspaces": [
+    "packages/*"
+  ]
+}
