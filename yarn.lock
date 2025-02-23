@@ -1182,6 +1182,12 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"be-db@workspace:packages/be-db":
+  version: 0.0.0-use.local
+  resolution: "be-db@workspace:packages/be-db"
+  languageName: unknown
+  linkType: soft
+
 "body-parser@npm:1.20.3":
   version: 1.20.3
   resolution: "body-parser@npm:1.20.3"

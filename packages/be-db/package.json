@@ -1,0 +1,7 @@
+{
+  "name": "be-db",
+  "scripts": {
+    "start": "mongod --dbpath ./data"
+  },
+  "packageManager": "yarn@4.6.0"
+}
