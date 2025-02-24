@@ -1,13 +1,16 @@
 import express from "express";
 import { connect, disconnect } from "src/utils/db";
-import { getPaginatedProducts } from "./storage/products";
+import { getProducts } from "./storage/products";
 import { getSuppliers } from "./storage/suppliers";
+import cors from "cors";
 
 const app = express();
 const port = 8000;
 
+app.use(cors());
+
 app.get("/products", async (req, res) => {
-  const result = await getPaginatedProducts(req.query);
+  const result = await getProducts(req.query);
 
   res.send(result);
 });

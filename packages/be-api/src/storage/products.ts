@@ -1,7 +1,7 @@
 import { Product } from "src/models/product";
 import { Product as IProduct } from "src/interfaces/product";
 
-interface Params {
+interface QueryString {
   page?: number;
   limit?: number;
   sortField?: string;
@@ -16,13 +16,13 @@ interface Result {
   totalPages: number;
 }
 
-export async function getPaginatedProducts({
+export async function getProducts({
   page = 1,
   limit = 50,
   sortField = "sku",
   sortOrder = "asc",
   searchTerm = "",
-}: Params): Promise<Result> {
+}: QueryString): Promise<Result> {
   const skip = (page - 1) * limit;
 
   const match: any = {};
