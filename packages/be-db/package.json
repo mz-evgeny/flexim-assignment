@@ -1,7 +1,12 @@
 {
   "name": "be-db",
   "scripts": {
-    "start": "mongod --dbpath ./data"
+    "db:start": "mongod --dbpath ./data",
+    "db:migrate": "node migrate.js"
   },
-  "packageManager": "yarn@4.6.0"
+  "packageManager": "yarn@4.6.0",
+  "devDependencies": {
+    "mongodb": "^6.13.1",
+    "umzug": "^3.8.2"
+  }
 }
