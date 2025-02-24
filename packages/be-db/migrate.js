@@ -1,10 +1,11 @@
 const { Umzug, MongoDBStorage } = require("umzug");
 const { MongoClient } = require("mongodb");
+const { DB_NAME, DB_URL } = require("shared");
 
 (async () => {
   try {
-    const client = await MongoClient.connect("mongodb://localhost:27017");
-    const db = client.db("flexim");
+    const client = await MongoClient.connect(DB_URL);
+    const db = client.db(DB_NAME);
     const collection = db.collection("migrations");
 
     const umzug = new Umzug({

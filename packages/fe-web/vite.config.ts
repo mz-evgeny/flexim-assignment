@@ -16,6 +16,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
+      shared: resolve("../shared/src/"),
       src: resolve("src/"),
     },
   },

@@ -1,17 +1,22 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { Product, QueryString } from "src/types";
+import { Params } from "shared";
+import { BASE_URL } from "src/constants";
+import { Product } from "src/types";
 
 export const productsApi = createApi({
   reducerPath: "productsApi",
-  baseQuery: fetchBaseQuery({ baseUrl: "http://localhost:8000/" }),
+  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
   endpoints: (builder) => ({
-    getPaginatedListProducts: builder.query<Product, QueryString>({
-      query: (queryString) => {
-        const queryParams = new URLSearchParams(queryString).toString();
+    getProducts: builder.query<
+      { data: Product[]; total: number; page: number; totalPages: number },
+      Params
+    >({
+      query: (params) => {
+        const queryParams = new URLSearchParams(params).toString();
         return `products?${queryParams}`;
       },
     }),
   }),
 });
 
-export const { useLazyGetPaginatedListProductsQuery } = productsApi;
+export const { useLazyGetProductsQuery } = productsApi;

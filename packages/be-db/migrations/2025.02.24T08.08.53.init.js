@@ -6,6 +6,11 @@ const suppliers = [
   { name: "Supplier A", country: "USA" },
   { name: "Supplier B", country: "Germany" },
   { name: "Supplier C", country: "Japan" },
+  { name: "Supplier D", country: "Canada" },
+  { name: "Supplier E", country: "Brazil" },
+  { name: "Supplier F", country: "Australia" },
+  { name: "Supplier G", country: "India" },
+  { name: "Supplier H", country: "South Korea" },
 ];
 
 const products = [

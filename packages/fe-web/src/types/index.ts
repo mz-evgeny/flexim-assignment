@@ -20,6 +20,6 @@ export type QueryString = {
   page?: string;
   limit?: string;
   sortField?: string;
-  sortOrder?: "asc" | "desc";
+  sortOrder?: "ascend" | "descend";
   searchTerm?: string;
 };
