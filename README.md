@@ -13,9 +13,9 @@ Test task for Flexim
 1. install `node`, `yarn`, `mongoDB`
 2. run `yarn install`
 3. run `yarn workspaces foreach -A run build`
-4. run `yarn packages/be-db db:migrate up`
-5. run packages:
-   - `yarn packages/be-db db:start`
+4. run `yarn packages/be-db db:start`
+5. run `yarn packages/be-db db:migrate up`
+6. run packages:
    - `yarn packages/be-api start`
    - `yarn packages/fe-web watch`
-6. open [url](http://localhost:3000)
+7. open [url](http://localhost:3000)
